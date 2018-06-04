@@ -1,0 +1,6 @@
+Mike@kaka|1.2.3.1|deny
+Mike@kaka|1.2.3.0/24|allow
+Mike@kaka|1.2.3.0/24|deny
+Rafi@kaka|1.2.3.1|deny
+Rafi@kaka|1.2.3.1|allow
+Rafi2222@kaka|1.2.3.1|deny
