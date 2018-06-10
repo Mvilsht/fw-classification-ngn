@@ -25,7 +25,7 @@ public class Rule {
     }
 
     public boolean isMatch(Packet packet) {
-        return username.isMatch(packet.getUsername()) && ip.isMatch(packet.getIp());
+        return username.isMatch(packet.getUsername()) && ip.isMatch(packet.getIp().toString());
     }
 
     @Override

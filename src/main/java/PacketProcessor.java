@@ -1,5 +1,4 @@
 import org.apache.commons.lang3.StringUtils;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -76,7 +75,7 @@ public class PacketProcessor {
                     if (isValidPacket(username, ip)) {
                         //boolean packetWasMatched = false;
                         boolean match = false;
-                        final Packet packet = new Packet(UsernameFactory.createUsername(username),ip);
+                        final Packet packet = new Packet(UsernameFactory.createUsername(username),IpFactory.createIp(ip));
                         System.out.println("matching: " + packet);
                         for (Rule rule : ruleBase) {
                             match = rule.isMatch(packet);
@@ -100,6 +99,7 @@ public class PacketProcessor {
             }
         }
 
+        //TODO can be made public and valid for unit test
         @SuppressWarnings("ResultOfMethodCallIgnored")
         private boolean isValidPacket(String username, String ip) {
             if (StringUtils.isBlank(username)) {

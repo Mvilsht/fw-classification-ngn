@@ -1,9 +1,9 @@
 public class Packet {
 
     private final Username username;
-    private final String ip;
+    private final IP ip;
 
-    public Packet(Username username, String ip) {
+    public Packet(Username username, IP ip) {
         this.username = username;
         this.ip = ip;
     }
@@ -12,7 +12,7 @@ public class Packet {
         return username;
     }
 
-    public String getIp() {
+    public IP getIp() {
         return ip;
     }
 
@@ -20,7 +20,7 @@ public class Packet {
     public String toString() {
         return "Packet{" +
                 "username=" + username.getName() +
-                ", ip=" + ip +
+                ", ip=" + ip.toString() +
                 '}';
     }
 

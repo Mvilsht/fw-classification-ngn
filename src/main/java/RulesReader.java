@@ -44,6 +44,7 @@ public class RulesReader {
         return ruleBase;
     }
 
+    //TODO can be changed to public and Unit tested
     @SuppressWarnings("ResultOfMethodCallIgnored")
     private static boolean isValidRule(String username, String ip, String action) {
         if (StringUtils.isBlank(username)) {
